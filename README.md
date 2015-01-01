@@ -37,3 +37,8 @@ I was thinking, F8 would prompt this script if the key was held down.  Tapped F8
 ## Projects you should check out
 * [SPF13-Vim](https://github.com/spf13/spf13-vim) includes a bundle of great plugins like [NERDTree](https://github.com/scrooloose/nerdtree) and [Airline](https://github.com/bling/vim-airline).  Even if you don't like bundles, I still recommend those two plugins they include.
 * [Pathogen](https://github.com/tpope/vim-pathogen) for installing things like SPF13-Vim.  ScrollColors shouldn't be that complicated.
+* [tmux](http://tmux.sourceforge.net/) Terminal Multiplexer
+* [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) Terminal Emulator with all sorts of settings!  Visit [this page](http://www.askapache.com/linux/rxvt-xresources.html) for some idea as to how to set it up.
+* [fluxbox](http://fluxbox.org/) (on [GitHub](https://github.com/fluxbox/fluxbox)!) a light-weight very stylish desktop environment. A classic that is way better than the modern LXDE! There's an old-style [style manager](https://github.com/michaelrice/fluxStyle) for it.
+
+I'll have dotfiles for all that in a `dotfiles` repo later to show you what I use so that you can edit them to fit your taste.
