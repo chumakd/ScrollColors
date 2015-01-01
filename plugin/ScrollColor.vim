@@ -2,51 +2,28 @@
 "
 "     Author and maintainer: Yakov Lerner <iler_ml@fastmail.fm>
 "     Last Change: 2006-07-18
-"
-" SYNOPSIS:
-"   This is colorscheme Scroller/Chooser/Browser.
-"   With this plugin, you walk through installed 
-"   colorschemes using arrow keys.
-"
-" SHORT USAGE DESCRIPTION:
-"   Drop ScrollColors.vim into your plugin directory. 
-"   Type :SCROLL    
-"   Use arrow keys to walk through colorschemes, ? for help, Esc to exit.
-"
-" DETAILED DESCRIPTION:
-"   1. source ScrollColors.vim  " or drop ScrollColors.vim into
-"                          " your ~/.vim/plugins directory
-"   2. Type :SCROLL
-"   3. Use arrows to scroll thgough colorschemes.
-"   4. When done, press Esc to exit. You will be prompted
-"      wether to 
-"
-"   You can download 140 colorschemes pack from:
-"        http://www.vim.org/scripts/script.php?script_id=625
-"   Having 140 installed colorschemes is in no way prerequisite for
-"   ScrollColors. But with ScrollColors you can preview 140 colorschemes
-"   in couple of minutes.
-"
-" CUSTOM KEY MAPPINGS:
-"   You can map two keys of your choice to NextColor and PrevColor actions.
-"   Choose pair of shortcut keys (for example <F2> and <f3>, or \n and \p)
-"   and map them as follows:
-"      map <silent><F3> :NEXTCOLOR<cr>
-"      map <silent><F2> :PREVCOLOR<cr>
-
+"   Edited by: Jason Charney <jrcharney@gmail.com> as of 2015-01-01
+"   Changes from the original:
+"   * No all caps commands. (
+"   * Intuitive keys mapped to work with the spf13-vim bundles.
+"   * Written like a project on Github (where this fork is located!)
+"       See https://github.com/jrcharney/ScrollColors
 
 if exists("g:scroll_colors") | finish | endif
 let g:scroll_colors = 1
 
-command! COLORSCROLL :call s:ColorScroller()
-command! SCROLLCOLOR :call s:ColorScroller()
-command! NEXTCOLOR   :call s:NextColorscheme()
-command! PREVCOLOR   :call s:PrevColorscheme()
+command! ScrollColor :call s:ColorScroller()
+command! ColorScroll :call s:ColorScroller()
+command! NextColor   :call s:NextColorscheme()
+command! PrevColor   :call s:PrevColorscheme()
 
+" TODO: Set this up!
+" TODO: What about scheduled color changes? Let's worry about that for some other plugin for now.
+" TODO: Coluld the random be A-F8?
 " Example of convenience mappings:
-"map <silent><F3> :NEXTCOLOR<cr>
-"map <silent><F2> :PREVCOLOR<cr>
-"map <silent><F4> :SCROLLCOLOR<cr>
+"map <silent><F8> :NextColor<cr>
+"map <silent><S-F8> :PrevColor<cr>
+"map <silent><C-F8> :ScrollColor<cr>
 
 function! s:ScrollerHelp()
     echo " "
@@ -455,3 +432,4 @@ map \c :echo g:colors_name<cr>
 " 2006-07-18 added colorlist cache (s:list)
 " 2006-07-18 added R key to refresh colorlist
 " 2006-07-19 for vim7, sort using builtin sort() (bubblesort is slow)
+" 2015-01-01 FORKED! Changed the case of the command, better keys, better documentation 
